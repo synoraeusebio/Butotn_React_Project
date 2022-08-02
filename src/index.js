@@ -27,21 +27,22 @@ CSS for the button?
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './index.css';
 
+/* Some example text code I was playing around with
+<div id="root"></div>
 
-//<div id="root"></div>
+const root = ReactDOM.createRoot(
+  document.getElementById('root')
+  );
 
-// const root = ReactDOM.createRoot(
-//   document.getElementById('root')
-//   );
-
-//   const element = <h1>Hello, world!</h1>;
-//   root.render(element)
+  const element = <h1>Hello, world!</h1>;
+  root.render(element)
+  */
   
 
-//create button
-
-
+/*
+1.create button as a class componene
 class MyButton extends React.Component {
    
   render() {
@@ -54,11 +55,29 @@ class MyButton extends React.Component {
       );
   }
 }
+*/
 
-//display the button on the screen
+
+//2. Create the button as a function component
+function MyButton(){
+
+
+      const shoot = () => {
+      alert("You did it!");
+    }
+
+
+    return (
+      <button onClick={shoot}>Click me!</button>
+      );
+  }
+
+
+
+//3. display the button on the screen
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<MyButton />);
 
-//When button is clicked, show an alert window with text
+
 
 
